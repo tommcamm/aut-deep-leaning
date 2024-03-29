@@ -1,0 +1,44 @@
+\documentclass[stu,a4paper]{apa7}
+
+\usepackage{lipsum}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{bibliography.bib}
+
+\title{Underwater Object Recognition}
+\shorttitle{Proposal Draft}
+
+\author{Tommaso Cammelli}
+\authorsaffiliations{Faculy of Design and Creative Technologies, Auckland University of Technology}
+\course{COMP 838: Deep Learning}
+\duedate{5 Apr 2024}
+\professor{Dr. Wei Qi Yan}
+
+
+% Abstract - [TODO]
+\abstract{
+\textbf{I'm going to do this at last, not lazy just want to have everything correct.}\\    
+}
+
+% == DOCUMENT BEGIN ==
+\begin{document}
+
+\maketitle
+
+% == IMPORTANT PART OF DOCUMENT ==
+\input{0-Introduction.tex}
+
+\input{1-LiteratureReview.tex}
+
+\input{2-Methodology.tex}
+
+\input{3-Remarks.tex}
+
+\printbibliography
+
+%\appendix
+\end{document}
+
+
