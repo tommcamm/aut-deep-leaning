@@ -1,22 +1,38 @@
 \section{Methodology}
 
+\begin{figure}[tb]
+    \begin{minipage}{0.48\textwidth}
+      \centering
+      \includegraphics[width=.7\linewidth]{figures/pre-processing.png}
+      \caption{Input underwater Image}
+      \label{Fig:PreProcessing}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+      \centering
+      \includegraphics[width=.7\linewidth]{figures/post-processing.png}
+      \caption{Enhanced Image with recognized objects}
+      \label{Fig:PostProcessing}
+    \end{minipage}
+\end{figure}
+
 \subsection{Data Collection}
 
 In this project publicly available underwater image datasets will be used,
-such as the Large Scale Underwater Image Dataset (LSUI) 
-\parencite{pengUshapeTransformerUnderwater2023}
-\footnote{LSUI dataset is available at
-\url{https://lintaopeng.github.io/_pages/UIE\%20Project\%20Page.html}}.
+such as the Underwater Object Detection Dataset (UODD) 
+\parencite{jiangUnderwaterSpeciesDetection2021}
+\footnote{UODD dataset is available at
+\url{https://github.com/LehiChiang/Underwater-object-detection-dataset}}.
 These datasets contain a diverse range of underwater scenes, including various
 flora, fauna, and man-made objects, providing a comprehensive basis for testing
-and comparison.
+and comparison, along with annotations labeled in MS COCO format.
 
 Given the inherent challenges of underwater imaging,
 such as varying light conditions and turbidity, images will undergo
 pre-processing to enhance quality and consistency.
 Techniques like color correction, contrast adjustment,
 and noise reduction will be applied to mitigate environmental effects on
-image quality, like shown in \parencite{tengUnderwaterTargetRecognition2020}.
+image quality, like shown in \parencite{tengUnderwaterTargetRecognition2020}
+and \parencite{pengUshapeTransformerUnderwater2023}.
 
 \subsection{Model Selection and Development}
 
@@ -50,9 +66,9 @@ to facilitate efficient model training and evaluation.
 
 \subsection{Evaluation Criteria}
 
-Models will be evaluated based on accuracy, precision, recall, and F1 score
-to determine their effectiveness in correctly identifying and classifying
-underwater objects.
+The evaluation of the various models will use common indicators like accuracy,
+precision, recall and F1 score to determine the effectiveness of each model
+in correctly identifying and classifying underwater objects.
 Additionally, computational efficiency, measured in terms of training time
 and inference speed, will be considered to assess the practicality
 of deploying these models in real-world applications.
@@ -61,3 +77,5 @@ The performance of each architecture will be compared to establish
 their relative strengths and weaknesses in underwater object recognition.
 This analysis will also explore the impact of varying dataset complexities
 and environmental conditions on model performance.
+
+\FloatBarrier
