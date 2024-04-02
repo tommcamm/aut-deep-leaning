@@ -1,2 +1,4 @@
 # Filter for copyrighted papers
 s11042-022-12502-1.pdf
+# Temporary ignore everything .pdf
+*.pdf

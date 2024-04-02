@@ -1,3 +1,63 @@
 \section{Methodology}
 
-...
+\subsection{Data Collection}
+
+In this project publicly available underwater image datasets will be used,
+such as the Large Scale Underwater Image Dataset (LSUI) 
+\parencite{pengUshapeTransformerUnderwater2023}
+\footnote{LSUI dataset is available at
+\url{https://lintaopeng.github.io/_pages/UIE\%20Project\%20Page.html}}.
+These datasets contain a diverse range of underwater scenes, including various
+flora, fauna, and man-made objects, providing a comprehensive basis for testing
+and comparison.
+
+Given the inherent challenges of underwater imaging,
+such as varying light conditions and turbidity, images will undergo
+pre-processing to enhance quality and consistency.
+Techniques like color correction, contrast adjustment,
+and noise reduction will be applied to mitigate environmental effects on
+image quality, like shown in \parencite{tengUnderwaterTargetRecognition2020}.
+
+\subsection{Model Selection and Development}
+
+\begin{APAitemize}
+    \item \textbf{CNNs}: Initial experiments will focus on conventional
+     CNN architectures, which have proven effective in basic underwater object
+     detection tasks.
+     These models will serve as a benchmark for comparing more advanced
+     architectures. % Add citations
+
+    \item \textbf{Residual Networks (ResNets)}: Given their ability to train
+     deeper networks by mitigating the vanishing gradient problem,
+     ResNets will be explored for their potential to improve recognition
+     accuracy in complex underwater scenes. % Add citations
+
+     \item \textbf{Transformers}: The study will also incorporate Transformer
+     models, which utilize self-attention mechanisms, to examine their
+     effectiveness in capturing the spatial relationships of objects in
+     underwater images. % Add citations
+\end{APAitemize}
+
+\subsection{Implementation}
+
+The project will employ Python as the primary programming language,
+leveraging its extensive ecosystem and the ease of finding pre-implemented
+models along with Jupyter notebook to help the visualization of data.
+For model implementation and training, I will utilize deep learning
+libraries such as TensorFlow and PyTorch.
+Experiments will be conducted on a laptop equipped with an Nvidia GPU
+to facilitate efficient model training and evaluation.
+
+\subsection{Evaluation Criteria}
+
+Models will be evaluated based on accuracy, precision, recall, and F1 score
+to determine their effectiveness in correctly identifying and classifying
+underwater objects.
+Additionally, computational efficiency, measured in terms of training time
+and inference speed, will be considered to assess the practicality
+of deploying these models in real-world applications.
+
+The performance of each architecture will be compared to establish
+their relative strengths and weaknesses in underwater object recognition.
+This analysis will also explore the impact of varying dataset complexities
+and environmental conditions on model performance.

@@ -1,5 +1,63 @@
-\section{Literature Review}
+%% #-- useful citation commands --#
+%% | \Textcite{}                  |
+%% | \parencite{}                 |
+%% #------------------------------#
 
-Here I'm going to cite a lot of things, so 
-\Textcite{fayazUnderwaterObjectDetection2022} citation style 1\\
-\parencite{fayazUnderwaterObjectDetection2022} citation style 2
+% 2- Literature Review (Heart of this proposal)
+\section{Literature Review}
+Underwater object recognition has been subject of increasing interest in the
+scientific community, the interest is driven by the increasing number of
+potential application in areas such as marine biology, underwater archeology
+and autonomous underwater navigation.
+
+\subsection{Deep Learning in Underwater Object Recognition}
+Deep learning has significantly advanced the field of computer vision,
+surpassing the capabilities of traditional object detection methods that
+relied on hand-crafted features for image classification.
+Initial endeavors predominantly employed Convolutional Neural Networks
+(CNNs), used for their proficiency in automatically learning
+and adapting spatial hierarchies of features from
+images \parencite{zhiqiangReviewObjectDetection2017}.
+For underwater detection CNN were used successfully to recognize objects with
+significant accuracy, managing to work against the challenges of low-quality
+images \parencite{hanUnderwaterImageProcessing2020}
+
+\subsection{Advancements and Architectural Innovations}
+Following the success of CNNs, more sophisticated architectures
+like Residual Networks (ResNets) have been introduced, allowing training on
+deeper networks by addressing the vanishing gradient problem 
+\parencite{heDeepResidualLearning2016}.
+ResNets have demonstrated remarkable performance in general object recognition
+tasks, yet their efficiency and adaptability in underwater conditions remain
+an area of active research.
+
+The advent of Transformer models, originally designed for natural
+language processing tasks, has been adapted for computer
+vision \parencite{hanSurveyVisionTransformer2023}.
+These models, which rely on self-attention mechanisms, offer a new
+approach to handling the spatial relationships in images,
+potentially offering advantages in complex underwater scenes where context
+and object relationships are important.
+
+\subsection{Challenges in Underwater environments}
+Recognizing objects underwater presents unique challenges not typically
+encountered in terrestrial environments.
+Factors such as variable lighting conditions, water turbidity, and the
+presence of particulates can significantly impact the performance of deep
+learning models \parencite{liUnderwaterImageEnhancement2020e}.
+Studies have begun to explore the robustness of different architectures under
+such conditions, emphasizing the need for models that can adapt to or correct
+for these environmental distortions.
+
+\subsection{Comparative Analyses in the Literature}
+Comparative studies specifically addressing the performance of deep learning
+architectures in underwater object recognition are sparse but growing.
+These studies are crucial for understanding the practical limitations and
+opportunities of applying these advanced computational models to underwater
+scenarios.
+For instance, a study by \Textcite{tengUnderwaterTargetRecognition2020}
+compared the accuracy and computational efficiency of CNNs
+and ResNets in identifying underwater mines,
+highlighting the trade-offs between model complexity and recognition
+performance.
+
