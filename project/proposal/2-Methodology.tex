@@ -67,8 +67,30 @@ to facilitate efficient model training and evaluation.
 \subsection{Evaluation Criteria}
 
 The evaluation of the various models will use common indicators like accuracy,
-precision, recall and F1 score to determine the effectiveness of each model
-in correctly identifying and classifying underwater objects.
+precision, recall and F1 score along with the confusion matrix
+to determine the effectiveness of each model in correctly identifying and
+classifying underwater objects.
+
+\begin{figure}[ht]
+    \begin{tabular}{l|l|c|c|c}
+        \multicolumn{2}{c}{}&\multicolumn{2}{c}{Prediction outcome}&\\
+        \cline{3-4}
+        \multicolumn{2}{c|}{}&Positive&Negative&\multicolumn{1}{c}{Total}\\
+        \cline{2-4}
+        \multirow{2}{*}{Actual values}& Positive & $TP$ & $FN$ & $P'$\\
+        \cline{2-4}
+        & Negative & $FN$ & $TN$ & $N'$\\
+        \cline{2-4}
+        \multicolumn{1}{c}{} & \multicolumn{1}{c}{Total} & \multicolumn{1}{c}{$P$} & \multicolumn{    1}{c}{$N$} & \multicolumn{1}{c}{}\\
+    \end{tabular}
+    \caption{Confusion Matrix used for model evaluation}
+    \label{Tab:confMatrix}
+\end{figure}
+
+\begin{equation}
+    F1 = \frac{2*Precision*Recall}{Precision+Recall} = \frac{2*TP}{2*TP+FP+FN}
+\end{equation}
+
 Additionally, computational efficiency, measured in terms of training time
 and inference speed, will be considered to assess the practicality
 of deploying these models in real-world applications.
