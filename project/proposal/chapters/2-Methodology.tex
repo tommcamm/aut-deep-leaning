@@ -27,6 +27,18 @@ including various species such as fish, crabs, and starfish,
 providing a comprehensive basis for testing and comparison. The annotations are labeled
 in formats like MS COCO, facilitating consistent and detailed evaluation of model performance.
 
+\subsection{Image Pre-Processing}
+
+Pre-processing of images plays a crucial role in enhancing the quality and clarity of underwater images,
+which can significantly impact the performance of deep learning models.
+The following techniques will be used and tested to improve image quality:
+
+\begin{itemize}
+    \item \textbf{Image Enhancement}: Techniques such as histogram equalization and contrast adjustment will be used to improve the visibility of features in underwater images.
+    \item \textbf{Noise Reduction}: Methods like median filtering and Gaussian blur will be applied to reduce the noise inherent in underwater images.
+    \item \textbf{Color Correction}: Algorithms such as white balance adjustment and color channel compensation will be utilized to correct the color distortions caused by underwater lighting conditions.
+    \item \textbf{Normalization}: Pixel values will be normalized to a standard range to ensure consistency across the dataset, facilitating better learning and generalization by the models.
+\end{itemize}
 
 \subsection{Model Selection and Development}
 
@@ -40,7 +52,7 @@ in formats like MS COCO, facilitating consistent and detailed evaluation of mode
      \begin{equation}
      (I * K)(x,y) = \sum_{i=-m}^{m} \sum_{j=-n}^{n} I(x+i, y+j) K(i, j)
      \end{equation}
-     where \( (x, y) \) are the coordinates of the pixel. 
+     where \( (x, y) \) are the coordinates of the pixel \parencite{dumoulinGuideConvolutionArithmetic2018}.
      These models will serve as a benchmark for comparing more advanced architectures.
 
     \item \textbf{Residual Networks (ResNets)}: Given their ability to train
@@ -51,7 +63,7 @@ in formats like MS COCO, facilitating consistent and detailed evaluation of mode
      \begin{equation}
      y = F(x, \{W_i\}) + x
      \end{equation}
-     where \( x \) is the input to the residual block, \( F \) is the residual mapping, and \( \{W_i\} \) are the weights of the layers in the block. This allows the network to learn the residual mapping instead of the original unreferenced mapping.
+     where \( x \) is the input to the residual block, \( F \) is the residual mapping, and \( \{W_i\} \) are the weights of the layers in the block \parencite{heDeepResidualLearning2016}. This allows the network to learn the residual mapping instead of the original unreferenced mapping.
 
      \item \textbf{Transformers}: The study will also incorporate Transformer
      models \parencite{hanSurveyVisionTransformer2023}, which utilize self-attention mechanisms to examine their
@@ -61,7 +73,7 @@ in formats like MS COCO, facilitating consistent and detailed evaluation of mode
      \begin{equation}
      \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
      \end{equation}
-     where \( Q \) (queries), \( K \) (keys), and \( V \) (values) are linear transformations of \( X \), and \( d_k \) is the dimension of the key vectors. This mechanism allows the model to weigh the importance of different elements in the sequence dynamically.
+     where \( Q \) (queries), \( K \) (keys), and \( V \) (values) are linear transformations of \( X \), and \( d_k \) is the dimension of the key vectors \parencite{vaswaniAttentionAllYou2023}. This mechanism allows the model to weigh the importance of different elements in the sequence dynamically.
 \end{APAitemize}
 
 \subsection{Implementation}

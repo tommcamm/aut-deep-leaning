@@ -6,8 +6,8 @@
 % 2- Literature Review (Heart of this proposal)
 \section{Literature Review}
 Underwater object recognition has been subject of increasing interest in the
-scientific community,  driven by the increasing number of
-potential application in areas such as marine biology, underwater archeology
+scientific community, driven by the increasing number of
+potential application in areas such as marine biology, underwater archaeology,
 and autonomous underwater navigation.
 
 \subsection{Deep Learning in Underwater Object Recognition}
@@ -18,9 +18,14 @@ Initial endeavors predominantly employed Convolutional Neural Networks
 (CNNs), used for their proficiency in automatically learning
 and adapting spatial hierarchies of features from
 images \parencite{zhiqiangReviewObjectDetection2017}.
-For underwater detection CNN were used successfully to recognize objects with
+For underwater detection, CNNs were used successfully to recognize objects with
 significant accuracy, managing to work against the challenges of low-quality
-images \parencite{hanUnderwaterImageProcessing2020}
+images \parencite{hanUnderwaterImageProcessing2020}.
+In particular, the YOLO (You Only Look Once) series, including YOLOv4,
+has demonstrated notable effectiveness.
+\Textcite{rosliUnderwaterAnimalDetection2021} showed that YOLOv4 achieved a remarkable 97.96\%
+mean average precision (mAP) and 46.6 frames per second (FPS) in underwater detection tasks,
+emphasizing its capability in handling varying visibility and low-light environments.
 
 \subsection{Advancements and Architectural Innovations}
 Following the success of CNNs, more sophisticated architectures
@@ -39,7 +44,7 @@ approach to handling the spatial relationships in images,
 potentially offering advantages in complex underwater scenes where context
 and object relationships are important.
 
-\subsection{Challenges in Underwater environments}
+\subsection{Challenges in Underwater Environments}
 Recognizing objects underwater presents unique challenges not typically
 encountered in terrestrial environments.
 Factors such as variable lighting conditions, water turbidity, and the
