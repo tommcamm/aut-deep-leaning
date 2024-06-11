@@ -1,0 +1,5 @@
+train: ./YOLO_UODD/images/train
+val: ./YOLO_UODD/images/val
+
+nc: 4  # Number of classes
+names: ['echinus', 'holothurian', 'scallop', 'starfish']  # Class names
